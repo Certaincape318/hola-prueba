@@ -6,7 +6,6 @@ use iron::status;
 fn main() {
     fn hello_world(_: &mut Request) -> IronResult<Response> {
         Ok(Response::with((status::Ok, "Hello World!")))
-        Ok(Response::with((status::Ok, "Isaac es gay!")))
     }
 
     let _server = Iron::new(hello_world).http("0.0.0.0:8080").unwrap();
